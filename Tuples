@@ -1,0 +1,283 @@
+What is Tuples ?
+A tuple is a collection which is ordered and unchangeable
+Tuples are very similar to list, but once a tuple is created, you cannot add, delete, replace, reorder elements. ie IMMUTABLE
+Tuples are enclosed parentheses ()
+Each item in a Tuples is separated by a comma
+Tuples are collection of items (Strings, integers or even other lists)
+Each item in the Tuples has an assigned index value.
+       Eg: tuple1 = (1, 2, 3, 4, 5) 
+Creating Tuples in python
+# Create an Empty Tuple
+tuple1  = () 
+print("Empty Tuple",tuple1)
+
+#Tuple having integers
+tuple2 = (10, 20, 30, 40, 50)
+print("Tuple having integers",tuple2)
+
+# Tuple having strings
+tuple3 = ("Python","Java","C")
+print("Tuple having strings",tuple3)
+
+# Nested Tuples
+tuple4 = ((15, 25), ("Python","Data Science"))
+print("Nested Tuples",tuple4)
+
+# Tuples of different datatypes
+tuple5 = (50, 98.3,'Python', (15, 25) )
+print("Tuples of different datatypes",tuple5)
+
+Output:
+Empty Tuple ()
+Tuple having integers (10, 20, 30, 40, 50)
+Tuple having strings ('Python', 'Java', 'C')
+Nested Tuples ((15, 25), ('Python', 'Data Science'))
+Tuples of different datatypes (50, 98.3, 'Python', (15, 25))
+Note: While creating tuples with single value, comma(,) needs to be included. If not instead of tuples , string data type will be created.
+
+# Parenthesis without comma at the end
+name = ('python')
+print(type(name))
+
+# Parenthesis with comma at the end
+name2 = ('python',)
+print(type(name2))
+
+Output:
+<class 'str'>
+<class 'tuple'>
+List Indexing and Slicing
+We can access individual elements using indexing and a range of characters using slicing.
+Index starts from 0
+Left to right direction
+
+
+
+Negative Indexing
+Index starts from -1
+Right to left direction
+The index of -1 refers to the last item, -2 to the second last item and so on
+
+Sample Code
+#Tuple having integers
+tuple1 = (10, 20, 30, 40, 50)
+print(tuple1[2]) #print second element
+
+#print last element using negative index
+print(tuple1[-2])
+
+#slicing from index 1 to index 3
+print(tuple1[1:3])
+
+# Other ways of slicing - Use it as per the requirement
+print(tuple1[:])
+print(tuple1[1:]) 
+print(tuple1[:3])
+
+Output:
+30
+40
+(20, 30)
+(10, 20, 30, 40, 50)
+(20, 30, 40, 50)
+(10, 20, 30)
+Updating Tuples
+Tuples are immutable which means you cannot update or change the values of tuple elements
+
+# Sample Code
+# Will get TypeError
+tuple1 = ("Python","Java","C")
+tuple1[2] = "R" 
+
+Output:
+TypeError:Traceback (most recent call last)
+<ipython-input-5-0849a64bef27> in <module>()
+      1 # Will get TypeError
+      2 tuple1 = ("Python","Java","C")
+----> 3 tuple1[2] = "R"
+
+TypeError: 'tuple' object does not support item assignment
+Delete Tuple Elements
+Removing individual tuple elements is not possible
+To explicitly remove an entire tuple, just use the del statement
+#Sample Code
+# Delete a particular item
+tuple2 = ("Python","Java","C")
+
+del tuple2[0]
+print(tuple2) 
+
+Output:
+TypeError: Traceback (most recent call last)
+<ipython-input-11-413b086685e6> in <module>()
+      2 tuple2 = ("Python","Java","C")
+      3 
+----> 4 del tuple2[0]
+      5 print(tuple2)
+
+TypeError: 'tuple' object doesn't support item deletion
+# Delete the full tuple
+tuple2 = ("Python","Java","C")
+
+del tuple2
+print(tuple2) 
+
+Output:
+NameError: Traceback (most recent call last)
+<ipython-input-12-95a8d54347f4> in <module>()
+      3 
+      4 del tuple2
+----> 5 print(tuple2)
+
+NameError: name 'tuple2' is not defined
+Traversing Tuple using for loop
+#loop through a Tuple
+
+Month = ("Jan","Feb","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec")
+
+for element in Month:
+    print(element)
+
+Output:
+Jan
+Feb
+Mar
+Apr
+May
+June
+July
+Aug
+Sep
+Oct
+Nov
+Dec
+Tuples Methods
+1. Concatenation
+# "+" - It Concatenates two tuples tuple1 and tuple2
+tuple1 = ("Vinoth","Anand","Kumaran")
+tuple2 = ("Sathish","Vignesh")
+Finaltuple = tuple1 + tuple2
+print(tuple1)
+print(tuple2)
+print(Finaltuple)
+
+Output:
+('Vinoth', 'Anand', 'Kumaran')
+('Sathish', 'Vignesh')
+('Vinoth', 'Anand', 'Kumaran', 'Sathish', 'Vignesh')
+2. Length
+# Length of sequence, i.e. the number of elements in the Tuple.
+tuple1 = (2,4,5,6,7,8,9,12,34,56,78,45,67,45,86,222)
+print("length of the Tuple is",len(tuple1))
+
+Output:
+length of the Tuple is 16
+3. Repetition
+# n copies of tuples concatenated
+tuple1 = ("Python",)
+print(tuple1 * 7)
+
+Output:
+('Python', 'Python', 'Python', 'Python', 'Python', 'Python', 'Python')
+4. Membership
+# Sample Code for 'in' operator - True if element x is in tuple.
+tuple1 = (26, 34, 24, 61, 132)
+print(24 in tuple1)
+
+# Sample Code for 'not in' operator -True if element x is not in tuple.
+print(35 not in tuple1)
+
+Output:
+True
+True
+5. Smallest number in the Tuple
+# Smallest element in Tuple
+tuple1 = (26, 34, 24, 61, 132)
+print("The smallest number in the tuple is",min(tuple1))
+
+Output:
+The smallest number in the tuple is 24
+6. Largest number in the Tuple
+#Largest element in Tuple.
+tuple1 = (26, 34, 24, 61, 132)
+print("The largest number in the tuple is",max(tuple1))
+
+Output:
+The largest number in the tuple is 132
+7. Sum of all the numbers in the Tuples
+# Sum of all numbers in Tuple
+tuple1 = (2,4,5,6,7,8,9,12,34,56,78,45,67,45,86,222)
+print("Sum of all the numbers in the tuple is",sum(tuple1))
+
+Output:
+Sum of all the numbers in the tuple is 686
+8. Count
+#  Returns the number of times element x appears in the Tuple.
+numbers = (1, 2, 3, 1, 2, 3, 1, 2)
+print("The number of times element occured is",numbers.count(1))
+
+Output:
+The number of times element occured is 3
+9. Index
+index() method searches for the given element in a tuple and returns its position. However, if the same element is present more than once, the first/smallest position is returned.
+
+
+ 
+# Integer example
+numbers = (1, 2, 3, 1, 2, 3, 1, 2)
+print("The index value of given integer is",numbers.index(3))
+
+# String example
+names = ('Vinoth', 'Anand', 'Kumaran', 'Sathish', 'Raghul', 'Santhosh')
+print("The index value of given string is",names.index('Sathish'))
+
+Output:
+The index value of given integer is 2
+The index value of given string is 3
+10. Sorted
+The sorted() method sorts the elements of a given list in a specific order - Ascending or Descending.
+By default in ascending order
+The original list is not changed.
+Note: A list also has sort() method which performs the same way as sorted(). Only difference being, sort() method doesn't return any value and changes the original list itself.
+
+# Sort the vowels in Ascending order
+vowels = ('e', 'a', 'u', 'o', 'i')
+print('Sorted Tuple:', sorted(vowels))
+
+Output:
+Sorted Tuple: ['a', 'e', 'i', 'o', 'u']
+# Setting reverse=True sorts the Tuples in the descending order
+vowels = ('e', 'a', 'u', 'o', 'i')
+print('Sorted Tuple (in Descending):', sorted(vowels,reverse=True))
+
+Output:
+Sorted Tuple (in Descending): ['u', 'o', 'i', 'e', 'a']
+# Sort the numbers in Ascending order
+numbers = (99, 19, 4, 1, 54, 25, 2)
+print('Sorted Numbers:', sorted(numbers))
+
+Output:
+Sorted Numbers: [1, 2, 4, 19, 25, 54, 99]
+Note: Methods that add items or remove items are not available with tuple as it is immutable
+
+How to creating tuples using tuple()?
+# Creating a tuple from a list
+tuple1 = tuple([0, 5, 10, 20])
+print('List to Tuple Conversion', tuple1)
+
+# Creating a tuple from a string
+tuple2 = tuple('Happy')
+print('String to Tuple Conversion', tuple2)
+
+# Creating a tuple from a dictionary
+tuple3 = tuple({1: 'Vinoth', 2: 'Anand'})
+print('Dictionary to Tuple Conversion', tuple3)
+
+Output:
+List to Tuple Conversion (0, 5, 10, 20)
+String to Tuple Conversion ('H', 'a', 'p', 'p', 'y')
+Dictionary to Tuple Conversion (1, 2)
+Advantages of Tuple over List
+If you have data that doesn't change, implementing it as tuple will guarantee that it remains write-protected.
+Since tuple are immutable, iterating through tuple is faster than with list. So there is a slight performance boost.
+Tuples that contain immutable elements can be used as key for a dictionary. With list, this is not possible.
