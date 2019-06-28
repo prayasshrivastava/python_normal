@@ -1,0 +1,188 @@
+Python Indentation
+Sample JAVA Program
+
+
+
+To define a block of code, in most of the programming languages like C, C++, Java. It uses braces { }
+In Python , the code block can be defined using indentation.
+Indentation Syntax : Tab or four(4) whitespaces
+Python Control Statements
+It is used in Python for decision making.It is required when we want to execute a code only if a certain condition is satisfied.
+
+Python is having 4 types of control statement
+
+if
+if else
+if elif else
+nested if
+1. if statement
+
+
+If the boolean expression evaluates to TRUE, then the block of statement(s) inside the if statement is executed.
+If boolean expression evaluates to FALSE, then the first set of code after the end of the if statement(s) is executed.
+Note: Python interprets non-zero values as True. None and 0 are interpreted as False.
+
+Syntax:
+if test expression:
+    statement(s) ( Tab or 4 white space)
+Example
+# Program to check whether the user age is below 18 or not
+user_age = 15
+
+if(user_age <= 18):
+    print("User age is 18 or younger")
+    
+Output:
+User age is 18 or younger
+# Program to check whether the user age is below 18 or not
+user_age = 20 # Execute twice with both the conditions
+
+if(user_age <= 18):
+    print("User age is 18 or younger")  
+    
+print("This line will be executed always")    
+
+Output:
+This line will be executed always
+2. if ... else Statement
+
+
+ 
+The if..else statement evaluates test expression and will execute body of if only when test condition is True.
+If the condition is False,then body of else is executed
+
+Syntax:
+if test expression:    
+    Body of if "statement(s)" ( Tab or 4 white space)
+else:     
+    Body of else "statement(s)" ( Tab or 4 white space)
+Example
+# Program to check whether the user age is below 18 or not
+user_age = 22
+
+if(user_age <= 18):
+    print("User age is 18 or younger")
+else:
+    print("User age is above 18")
+
+Output:
+User age is above 18
+# Program to verify whether the number is positive or not
+num = 10 # Execute twice with negative value
+if num > 0:
+    print("Positive number")
+else:
+    print("Negative Number")
+    
+Output:
+Positive number
+3. if...elif...else Statement
+
+
+It allows us to check for multiple expressions.
+If the condition for if is False, it checks the condition of the next elif block and so on.
+If all the conditions are False, body of else is executed.
+
+Note: The if block can have only one else block. But it can have multiple elif blocks.
+
+Syntax:
+if test expression:
+    Body of if "statement(s)" ( Tab or 4 white space)
+elif test expression:    
+    Body of elif "statement(s)" ( Tab or 4 white space)
+else:     
+    Body of else "statement(s)" ( Tab or 4 white space)
+Example:
+# Program to verify whether the number is positive or not
+num = 0
+
+if num > 0:
+    print("Positive number")
+elif num == 0:
+    print("ZERO")
+else:
+    print("Negative Number") 
+    
+Output:
+ZERO
+# Program to verify total number of digits
+num = 100
+if 9 < num < 99:
+    print("Two digit number")
+elif 99 < num < 999:
+    print("Three digit number")
+elif 999 < num < 9999:
+    print("Four digit number")
+else:
+    print("Number is not in the mentioned range")
+    
+Output:
+Three digit number
+Note: Python does not provide switch or case statements as in other languages, but we can use if..elif...statements to simulate switch
+
+
+ 
+# Program to display the month name
+month_num = 12
+
+if month_num == 1:
+    print("January Month")
+elif month_num == 2:
+    print("February Month")
+elif month_num == 3:
+    print("March Month")
+elif month_num == 4:
+    print("April Month")
+elif month_num == 5:
+    print("May Month")
+elif month_num == 6:
+    print("June Month")
+elif month_num == 7:
+    print("July Month")    
+elif month_num == 8:
+    print("August Month")
+elif month_num == 9:
+    print("September Month")    
+elif month_num == 10:
+    print("October Month")
+elif month_num == 11:
+    print("November Month")   
+elif month_num == 12:
+    print("December Month")
+else:
+    print("Enter a valid number")
+    
+Output:
+December Month
+4. Nested if Statements
+There may be a situation when you want to check for another condition after a condition resolves to true. In such a situation, you can use the nested if construct.
+We can have a if...elif...else statement inside another if...elif...else statement. This is called nesting in computer programming.
+
+Note: Any number of these statements can be nested inside one another. Indentation is the only way to figure out the level of nesting. This can get confusing, so must be avoided if we can
+
+Syntax:
+if expression1:
+   statement(s)
+   if expression2: # Nested if
+      statement(s)
+   elif expression3:
+      statement(s)
+   elif expression4:
+      statement(s)
+   else:
+      statement(s)
+else:
+   statement(s)
+Example:
+# Program to verify whether the number is positive or not
+num = 20
+if num >= 0:
+    if num == 0:
+        print("Zero")
+    else:
+        print("Positive number")
+else:
+    print("Negative number")
+    
+Output:
+Positive number
