@@ -1,0 +1,64 @@
+Comparison or Relational Operators
+Comparison operators are used to compare values. It either returns True or False according to the condition.
+
+
+# Sample code for Comparison Operators 
+a = 20
+b = 10
+
+# Greater Than 
+print('{} > {} is'.format(a,b),a>b)
+
+# Less Than
+print('{} < {} is'.format(a,b),a<b)
+
+# Equal To
+print('{} == {} is'.format(a,b),a==b)
+
+# Not Equal To 
+print('{} != {} is'.format(a,b),a!=b)
+
+# Greater than or equal to
+print('{} >= {} is'.format(a,b),a>=b)
+
+# Less than or equal to 
+print('{} <= {} is'.format(a,b),a<=b)
+Output:
+20 > 10 is True
+20 < 10 is False
+20 == 10 is False
+20 != 10 is True
+20 >= 10 is True
+20 <= 10 is False
+Logical Operators in Python
+
+# Sample code for Logical Operators 
+
+a = True
+b = False
+
+x = 50
+y= 100
+
+# 'and' Operator
+print('a and b is',a and b)
+print(x==y and x < y)
+
+# 'or' Operator
+print('a or b is',a or b)
+print(x==y or x < y)
+
+# 'not' Operator 
+print('not a is',not a)
+print(not x==y)
+print(not x < y)    
+Output:
+a and b is False
+False
+********************
+a or b is True
+True
+********************
+not a is False
+True
+False
