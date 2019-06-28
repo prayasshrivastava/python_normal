@@ -1,0 +1,248 @@
+Concatenation of Two or More Strings
+Joining of two or more strings into a single one is called concatenation.
+The + operator does this in Python. Simply writing two string literals together also concatenates them.
+The * operator can be used to repeat the string for a given number of times.
+#Sample Code
+s1 = "Hello "
+s2 = "Anand "
+
+#concatenation of 2 strings
+print(s1 + s2)
+
+#repeat string n times
+print(s2 * 3)
+
+Output:
+Hello Anand 
+Anand Anand Anand 
+ord() and chr() Functions
+# ord() – function returns the ASCII code of the character.
+ch = 'b'
+print(ord(ch))
+
+Output:
+98
+# chr() – function returns character represented by a ASCII number.
+print(chr(97))
+print(chr(65))
+print(chr(98))
+
+Output:
+a
+A
+b
+String Comparison
+You can use ( > , < , <= , >= , == , != ) to compare two strings.
+Python compares string lexicographically i.e using ASCII value of the characters.
+#Sample Code for String Comparison 
+
+print("Python" == "Python")
+print("PYTHON" == "Python")
+
+print("PYTHON" != "Java")
+
+print("Python" > "PYTHON")
+print("Python" < "PYTHON")
+
+print("Python" >= "PYTHON")
+print("Python" <= "PYTHON")
+
+Output:
+True
+False
+True
+True
+False
+True
+False
+String Membership Operator
+# Sample Code for 'in' operator
+Str1 = "All the best"
+print('best' in Str1)
+
+# Sample Code for 'not in' operator
+str2 = "Happy Learning"
+print('sad' not in str2)
+
+Output:
+True
+True
+Iterating String using for loop
+# Program to print each character of a string
+for x in "python":
+    print(x)   
+    
+Output:
+p
+y
+t
+h
+o
+n
+String Functions or Methods
+1. strip() method removes any whitespace from the beginning or the end
+str1 = "    Welcome to Python Session "
+print(str1) # Printing with Space
+print(str1.strip()) # Printing without Space 
+
+Output:
+    Welcome to Python Session 
+Welcome to Python Session
+2. len() method returns the length of a string
+str2 = "Python String Length"
+print('Length of String is ',len(str2))
+
+Output:
+Length of String is  20
+3. lower() method returns the string in lower case
+str3 = "WELCOME"
+print(str3.lower())  
+
+Output:
+welcome
+4. islower() method check whether string is in lower case of not.
+str4 = "welcome"
+print(str4.islower())
+
+Output:
+True
+5. upper() method returns the string in upper case
+str5 = "welcome"
+print(str5.upper())
+
+Output:
+WELCOME
+6. isUpper() method check whether string is in upper case of not.
+str6 = "WELCOME"
+print(str6.isupper())
+
+Output:
+True
+7. isalpha() method check Checks if All Characters are Alphabets
+str9 = "Python"
+str10 = "Python123"
+str11 = "123"
+str12 = "Python123@#@#"
+print(str9.isalpha())
+print(str10.isalpha())
+print(str11.isalpha())
+print(str12.isalpha())  
+
+Output:
+True
+False
+False
+False
+8. isdigit() method check whether string is Checks Digit Characters
+str9 = "Python"
+str10 = "Python123"
+str11 = "123"
+str12 = "Python123@#@#"
+print(str9.isdigit())
+print(str10.isdigit())
+print(str11.isdigit())
+print(str12.isdigit())
+
+Output:
+False
+False
+True
+False
+9. isalnum() method check whether string is Checks Alphanumeric Character
+str9 = "Python"
+str10 = "Python123"
+str11 = "123"
+str12 = "Python123@#@#"
+print(str9.isalnum())
+print(str10.isalnum())
+print(str11.isalnum())
+print(str12.isalnum())
+
+Output:
+True
+True
+True
+False
+10. count() method returns the number of occurrences of a substring in the given string.
+string = "Python is easy to learn.This"
+string = "Python is easy to learn. This is also called as easy programming language"
+substring = "is"
+
+count = string.count(substring)
+
+# print count
+print("The count is:", count)
+
+Output:
+The count is: 2
+11. join() method returns a string concatenated with the elements of an iterable.
+string1 = '-'
+string2 = '123456'
+
+print('string1.join(string2):', string1.join(string2))
+
+Output:
+string1.join(string2): 1-2-3-4-5-6
+12. split() method breaks up a string at the specified separator and returns a list of strings.
+# splits at space
+str1= 'Welcome to Python Class'
+print(str1.split())
+
+# splits at ','
+str2 = "Vinoth,Anand,Santhosh,Raghul"
+# splits at ','
+print(str2.split(','))
+
+# splits at ':'
+str3 = "121212121:1212121:21434322434:4234234"
+print(str3.split(':'))
+
+Output:
+['Welcome', 'to', 'Python', 'Class']
+['Vinoth', 'Anand', 'Santhosh', 'Raghul']
+['121212121', '1212121', '21434322434', '4234234']
+13. find() method returns the index of first occurrence of the substring (if found). '
+If not found, it returns -1.
+str = 'Do you like programming?'
+print("Substring 'like' at index':", str.find('like'))
+
+Output:
+Substring 'like' at index': 7
+14. replace() method returns a copy of the string where all occurrences of a substring is replaced with another substring.
+# Character replacement
+fruit = 'Appla'
+print (fruit.replace('a', 'e'))
+
+# String replacement
+color = 'red, rose, greeen , yellow, rose'
+print (color.replace('rose', 'blue'))
+
+# The original string is unchanged
+print ('Original string:', fruit)
+print ('Replaced string:', fruit.replace('a', 'e'))
+
+Output:
+Apple
+red, blue, greeen , yellow, blue
+Original string: Appla
+Replaced string: Apple
+15. sorted() method returns a sorted list from the given iterable.
+String = 'dzsewkitng'
+print(sorted(String))
+
+Output:
+['d', 'e', 'g', 'i', 'k', 'n', 's', 't', 'w', 'z']
+16. startswith() method returns True if a string starts with the specified prefix.
+If not, it returns False.
+text = "Python is easy to learn"
+print(text.startswith("Python"))
+
+Output:
+True
+17. endswith() method returns True if a string ends with the specified suffix.
+If not, it returns False.
+text = "Python is easy to learn"
+print(text.endswith("learn"))
+
+Output:
+True
