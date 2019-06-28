@@ -1,0 +1,113 @@
+Python Break Statement
+Break statement allows to breakout out of the loop.
+Break statement can be used in both while and for loops.
+
+Syntax
+break
+
+Example
+# Program to print the fruits available inside the list
+fruits = ["Apple", "Banana", "Cherry","Mango","Pineapple","Jackfruit"]
+
+for x in fruits:
+    print(x)
+    if x == "Mango":
+        break      
+
+Output:
+Apple
+Banana
+Cherry
+Mango
+# Program to print numbers in ascending order till the mentioned limit
+i = 1
+while i <= 10:
+    print(i)
+    i += 1
+    if i == 5:
+        break
+print("Execution Completed!")       
+
+Output:
+1
+2
+3
+4
+Execution Completed!
+Note:If you are using nested loops, the break statement stops the execution of the innermost loop and start executing the next line of code after the block.
+
+# Nested for loop example without break statement
+for x in range(1,4):  # 1 ,2, 3
+    ### Inner for loop	 ###
+    for y in range(1,4):
+        print(x,y)     
+
+Output:
+1 1
+1 2
+1 3
+2 1
+2 2
+2 3
+3 1
+3 2
+3 3
+# Nested for loop with break statement
+for x in range(1,4):  # 1 ,2, 3
+    ### Inner for loop	 ###
+    for y in range(1,4):
+        print(x,y)
+        if x == 2 and y == 2:
+            break    
+
+Output:
+1 1
+1 2
+1 3
+2 1
+2 2
+3 1
+3 2
+3 3
+Python Continue Statement
+The continue statement rejects all the remaining statements in the current iteration of the loop and moves the control back to the top of the loop.
+The continue statement can be used in both while and for loops.
+
+Syntax:
+    continue
+
+Example
+# Program to print numbers in ascending order till the mentioned limit
+i = 0
+while i <= 10:
+    i += 1
+    if i == 5:
+        continue
+    print(i)
+print("Execution Completed!") 
+
+Output:
+1
+2
+3
+4
+6
+7
+8
+9
+10
+11
+Execution Completed!
+#print even numbers present in a list
+numbers = [1, 2, 3, 4, 5, 9, 20 , 23, 36]
+
+for num in numbers:
+    if num % 2 != 0:
+        continue
+    print(num)
+
+Output:
+2
+4
+20
+36
