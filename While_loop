@@ -1,0 +1,61 @@
+Python Loops
+A loop statement allows us to execute a statement or group of statements multiple times.
+
+Python has two primitive loop commands:
+
+while loops
+for loops
+
+While Loop
+The while loop in Python is used to iterate over a block of code as long as the test expression (condition) is true
+
+
+Syntax:
+while expression:
+   Body of while
+# Program to print numbers in ascending order till the mentioned limit
+i = 1
+while i <= 6:
+    print(i)
+    i += 1
+
+print("Execution Completed!")
+
+Output:
+1
+2
+3
+4
+5
+6
+Execution Completed!
+
+Using else Statement with Loops
+If the else statement is used with a while loop, the else statement is executed when the condition becomes false.
+
+
+ 
+# Program to print numbers in ascending order till the mentioned limit 
+i = 1
+while i <= 6:
+    print(i)
+    i += 1
+else:
+    print("Else statement is executed at the end as mandatory")
+
+print("Execution Completed!")
+
+Output:
+1
+2
+3
+4
+5
+6
+Else statement is executed at the end as mandatory
+Execution Completed!
+Infinite Loop
+A loop becomes infinite loop if a 
+condition never becomes FALSE. This results in a loop that never ends. Such a loop is called an infinite loop
+Use CTRL+C to exit the program
+
