@@ -1,0 +1,86 @@
+What is a Variable?
+Variables are the reserved memory locations to store values(data). This means that when you create a variable you reserve some space in memory.
+
+
+Location of Variable
+id is used to find the address or location of the variables.
+
+# id is used to find the address of the variables 
+age = 20
+print(id(age))
+
+name ="Python"
+print(id(name))
+
+company = "" 
+print(id(company))
+
+Output:
+140736363164000
+1534947487848
+1534917180528
+    
+Rules for Python Variables
+An variable is a sequence of letters such as uppercase(A to Z),lowercase(a to z),digits(0 to 9) and an underscore (_) ie “Alphanumeric “ characters.
+It does not allow punctuation characters such as @, $, and % within variable.
+It is a case sensitive ( Eg: Students and student are different variable)
+Reserved words cannot be used as variable.
+It cannot start with a digit. (Python thinks it is a number)
+Eg: 1student is invalid 
+     student1 is valid 
+	      
+Creating and Assigning Values to Variables
+A variable is created the moment you first assign a value to it. The equal sign (=) is used to assign values to variables.
+
+# Declaring the variables 
+rollnumber  = 12345 # rollnumber  is integer
+name = "Santosh" # name is string
+marks = 80.5  # marks is float
+print(rollnumber,name,marks)
+
+Output:
+12345 Santosh 80.5
+    
+Conclusion: Python variables do not need explicit declaration to reserve memory space. The declaration happens automatically when you assign a value to a variable. Based on the data type of a variable, the interpreter allocates memory and decides what can be stored in the reserved memory. Note: An interpreter is a program that reads and executes code
+
+Multiple Assignment
+# 1. Multiple variables in single row
+a,b,c,d = 10,20,30,40
+print(a,b,c,d)
+
+Output:
+10 20 30 40
+# 2. Multiple variables of different data types
+name,rollnumber,marks="Santosh",12345,85.75
+print(name,rollnumber,marks)
+
+Output:
+Santosh 12345 85.75
+# 3. Single value to several variables
+graph1 = graph2 = graph3 = "DataScience"
+print(graph1,graph2,graph3)
+
+Output:
+DataScience DataScience DataScience
+Memory Allocation
+If the value is same, the memory location will be also same.
+
+
+ 
+# id is used to find the address of the varaible
+print(id(graph1))
+print(id(graph2))
+
+Output:
+1534987626544
+1534987626544
+# Updating the value of varible (graph2) and checking the memory location
+graph2= "Python"
+print(id(graph2))
+
+Output:
+1534947487848
+
+Conclusion: The performance of our coding depends on 2 things.
+1. Code logic
+2. Memory allocation(how we handle variables)
