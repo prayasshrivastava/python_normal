@@ -1,0 +1,43 @@
+What is Data Type?
+It is an attribute that tells what kind of data that value or a variable can have it.
+
+#Example:
+rollnumber  = 12345 # rollnumber  is integer
+name = "Anand" # name is string
+marks = 80.5  # marks is float
+
+
+Standard Data Types
+Numbers
+String
+List
+Tuple
+Dictionary
+
+
+Python Numbers
+Python support 3 different numerical types :
+1. Integer
+2. Float
+3. Complex Number
+
+i = 50 # Number without decimal point - Integer
+f = 3.14 # Number with decimal point - Float
+x = 2 + 3j # Number consists of both real and imaginary value - Complex Number
+print(i,f,x)
+
+Output:
+50 3.14 (2+3j)
+Identifying the Variable Types
+type()- inbuilt function which is used to determine the type of the variable.
+
+
+ 
+print(type(i))
+print(type(f))
+print(type(x))
+
+Output:
+class 'int'
+class 'float'
+class 'complex'
