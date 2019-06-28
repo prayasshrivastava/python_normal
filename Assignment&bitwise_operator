@@ -1,0 +1,119 @@
+Augmented Assignment Operator
+* Assignment operators are used in Python to assign values to variables
+  Eg: a = 10
+Augmented Assignment Operator:
+* It combines assignment operator with other logical operators like addition, multiplication etc.
+* This operators that allows to write shortcut assignment statement
+
+
+# Simple Expression
+i = 1
+i = i + 1
+print('Simple expression value is',i)
+
+# Additional Assignment
+j = 1 
+j +=1   # This means j = j + 1 
+print('Additional Assignment value is',j)
+
+# Subtraction Assignment
+k=1
+k -= 2  # k = k -2 
+print('Subtraction Assignment value is',k)
+
+# Multiplication Assignment
+m = 2
+m *= 2  # m =  m * 2
+print('Multiplication Assignment value is',m)
+
+# Float Division Assignment
+n=5
+n /= 2  # n = n / 2 
+print('Float Division Assignment value is',n)
+
+# Integer division Assignment
+p = 5
+p //= 2  # p = p // 2 
+print('Integer division Assignment value is',p)
+
+# Remainder Assignment
+q = 5
+q %= 2 # q = q % 2
+print('Remainder Assignment value is',q)
+
+# Exponent Assignment
+r = 3
+r **= 2   # r= r ** 2 
+print('Exponent Assignment value is',r)    
+Output:
+Simple expression value is 2
+Additional Assignment value is 2
+Subtraction Assignment value is -1
+Multiplication Assignment value is 4
+Float Division Assignment value is 2.5
+Integer division Assignment value is 2
+Remainder Assignment value is 1
+Exponent Assignment value is 9
+Bitwise operators
+Bitwise operators are used to compare (binary) numbers. It works on bits and performs bit by bit operation
+
+
+
+
+ 
+Method to convert a number to binary number 
+ syntax: '{0:08b}'.format(number)
+Where,
+  {} - places a variable into a string
+  0 - takes the variable at argument position 0
+  : - adds formatting options for this variable (otherwise it would represent decimal 6)
+  08 - formats the number to eight digits zero-padded on the left
+  b - converts the number to its binary representation
+
+#Sample Code
+a = 17
+b = 10 
+
+print("Binary number for {0} is {0:08b}".format(a))
+print('Binary number for {0} is {0:08b}'.format(b))
+
+Output:
+Binary number for 17 is 00010001
+Binary number for 10 is 00001010
+Bitwise operators Sample Code
+
+
+ 
+# Binary AND - Sets each bit to 1 if both bits are 1
+# 00000000
+print('Binary AND value is ',a&b)
+
+# Binary OR -  Sets each bit to 1 if one of two bits is 1
+# 00011011
+print('Binary OR value is ',a|b)
+
+# Binary XOR - Sets each bit to 1 if only one of two bits is 1
+# 00011011
+print('Binary XOR value is ',a^b)
+
+# Binary Ones Complement - Inverts all the bits
+# 11101110
+print('Binary Ones Complement is ',~a)
+
+# Binary Right Shift  
+'''Shift right by pushing copies of the leftmost bit in from the left, and 
+let the rightmost bits fall off'''
+# 00000100
+print('Binary Right Shift is ',a>>2)
+
+# Binary Left Shift - Shift left by pushing zeros in from the right
+ and let the leftmost bits fall off
+# 01000100
+print('Binary Left Shift is ',a<<2)
+Output:
+Binary AND value is  0
+Binary OR value is  27
+Binary XOR value is  27
+Binary Ones Complement is  -18
+Binary Right Shift is  4
+Binary Left Shift is  68
