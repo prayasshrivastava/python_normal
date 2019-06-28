@@ -1,0 +1,162 @@
+What is Data Type?
+It is an attribute that tells what kind of data that value or a variable can have it.
+
+#Example:
+rollnumber  = 12345 # rollnumber  is integer
+name = "Anand" # name is string
+marks = 80.5  # marks is float
+Standard Data Types
+Numbers
+Strings
+List
+Tuple
+Dictionary
+Python Strings
+A string is a sequence of characters.
+It is represented by either single quotation marks, or double quotation marks.
+Even triple quotes can be used in Python but generally used to represent multiline strings and docstrings.
+Note: Python doesn’t have any separate data type for characters so they are represented as a single character string
+
+
+ 
+How to create a python string?
+#Sample Code
+singlequote = 'Python String'
+print(singlequote)
+
+doublequote = "Python Tutorials"
+print(doublequote)
+
+# triple quotes string can extend multiple lines
+triplequote = """Welcome to Vinoth Rathinam
+                    Tutorials"""
+print(triplequote)
+
+Output:
+Python String
+Python Tutorials
+Welcome to Vinoth Rathinam
+                    Tutorials
+Accessing Values in Strings (Slicing)
+We can access individual characters using indexing and a range of characters using slicing.
+Index starts from 0.
+Left to right direction
+#Sample Code
+myString = "Python for Machine Learning"
+
+#print first Character
+print(myString[0])
+
+#slicing 11th to 18th characters
+print(myString[11:18])
+
+# Using the defalut values - Use it as per the requirement
+print(myString[:])
+print(myString[11:]) 
+print(myString[:11])
+
+Output:
+P
+Machine
+Python for Machine Learning
+Machine Learning
+Python for 
+Negative Indexing
+Python allows negative indexing for its sequences.
+Index starts from -1
+Right to left direction
+The index of -1 refers to the last item, -2 to the second last item and so on
+
+# Sample code to slice the strings
+myString2 = "Python for Automation"
+
+#print last character using negative indexing
+print(myString2[-1])
+
+print(myString2[-2])
+
+print(myString2[-5])
+
+#slicing 7th to 2nd last character
+print(myString2[7:-2])
+
+Output:
+n
+o
+a
+for Automati
+Index out of the range
+If we try to access index out of the range or use decimal number, we will get "IndexError"
+The index must be an integer. We can't use float or other types, this will result into TypeError.
+Python allows negative indexing for its sequences
+# Sample code for IndexError
+myString3 = "Python"
+print(myString3[6])
+
+Output:
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+<ipython-input-25-4f411a63679a> in <module>()
+      1 # Sample code for IndexError
+      2 myString3 = "Python"
+----> 3 print(myString3[6])
+
+IndexError: string index out of range
+# Sample code for TypeError
+print(myString2[1.5])
+
+Output:
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-26-3f161d7da838> in <module>()
+      1 # Sample code for TypeError
+----> 2 print(myString2[1.5])
+
+TypeError: string indices must be integers
+How to change or update a string ?
+Strings are immutable. This means that elements of a string cannot be changed once it has been assigned.
+We can simply reassign different strings to the same name.
+# Creating a string and checking the memory address
+str1 = "Python "
+print(str1)
+print("Memory location before update",id(str1))
+
+# Trying to modify the string
+str1 += "Tutorials"  # str1 = str1 + "Tutorials"
+print(str1)
+print("Memory location after update",id(str1))
+
+Output:
+Python 
+Memory location before update 1825268075800
+Python Tutorials
+Memory location after update 1825268818328
+# Updating the String Value
+myStr = "Happy Learning"
+print(myStr)
+myStr[4] = 's'
+
+Output:
+Happy Learning
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-29-85c0b5e71d2c> in <module>()
+      2 myStr = "Happy Learning"
+      3 print(myStr)
+----> 4 myStr[4] = 's'
+
+TypeError: 'str' object does not support item assignment
+How to Delete a String?
+We cannot delete or remove characters from a string.
+We can delete the string entirely using the keyword "del"
+# Code to delete complete string
+del myStr
+print(myStr)
+
+Output:
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-31-ede3757523fc> in <module>()
+----> 1 print(myStr)
+
+NameError: name 'myStr' is not defined
